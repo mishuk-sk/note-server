@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"log"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -12,7 +13,7 @@ import (
 const ShutdownTimeout = time.Second * 5
 
 func main() {
-	mux := http.NewServerMux()
+	mux := http.NewServeMux()
 
 	// register mux handlers
 
